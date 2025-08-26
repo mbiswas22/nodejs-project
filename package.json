@@ -1,5 +1,5 @@
 {
-    "name": "helloWorld_node",
+    "name": "hello-world_node",
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
