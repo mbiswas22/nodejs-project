@@ -8,7 +8,8 @@ environment {
     stages { 
         stage('Checkout Code') { 
             steps { 
-                git 'https://github.com/mbiswas22/nodejs-project.git' 
+                git scm
+                // git 'https://github.com/mbiswas22/nodejs-project.git' 
             } 
         } 
  
