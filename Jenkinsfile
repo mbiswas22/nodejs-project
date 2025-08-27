@@ -20,6 +20,19 @@ environment {
                 } 
             } 
         } 
+
+        stage('Pushing Docker Image') { 
+            environment {
+                registryCredential = 'dockerLogin' // Need to add credential
+            }
+            steps { 
+                script { 
+                    docker.withRegistry('http://registry.hub.docker.com/', registryCredential){
+                       dockerImage.push("latest") 
+                     } 
+                } 
+            } 
+        } 
  
         stage('Deploy to Kubernetes') { 
             steps { 
